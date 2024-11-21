@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lelang Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LelangOnline</div>
+            <ul>
+                <li><a href="#about">Tentang Lelang</a></li>
+                <li><a href="#items">Barang Lelang</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Halaman Login -->
+    <section id="login-section">
+        <div class="card">
+            <h2 align="center">Login</h2>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Halaman Utama -->
+    <main id="main-section" class="hidden">
+        <section id="about" class="card">
+            <h2>Tentang Lelang</h2>
+            <p>Selamat datang di platform Lelang Online kami, tempat Anda bisa menjual atau membeli barang dengan cara yang transparan dan mudah!</p>
+        </section>
+
+        <section id="items" class="card">
+            <h2>Barang yang Akan Dilelang</h2>
+            <div id="items-list">
+                <p>Belum ada barang yang ditambahkan.</p>
+            </div>
+            <button id="addItemBtn" class="hidden">Tambah Barang</button>
+        </section>
+    </main>
+
+    <!-- Modal untuk Tambah/Edit Barang -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Tambah Barang</h3>
+            <form id="itemForm">
+                <label for="itemName">Nama Barang</label>
+                <input type="text" id="itemName" placeholder="Masukkan nama barang" required>
+                
+                <label for="itemDesc">Deskripsi</label>
+                <textarea id="itemDesc" placeholder="Masukkan deskripsi barang" required></textarea>
+                
+                <label for="itemImage">Foto Barang</label>
+                <input type="file" id="itemImage" accept="image/*" required>
+                <div id="imagePreview" class="image-preview">Tidak ada gambar.</div>
+                
+                <button type="submit">Simpan</button>
+            </form>
+        </div>
+    </div>
+            <!-- Tombol Logout (awalnya disembunyikan) -->
+<button id="logoutBtn" class="hidden">Logout</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
